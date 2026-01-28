@@ -1,0 +1,15 @@
+Index: 01 lesson/lesson_1_task_3.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/01 lesson/lesson_1_task_3.py b/01 lesson/lesson_1_task_3.py
+--- a/01 lesson/lesson_1_task_3.py
++++ b/01 lesson/lesson_1_task_3.py	(date 1767629374182)
+@@ -1,4 +1,5 @@
+ first_name = input("Введите Ваше имя: ")
+ last_name = input("Введите Вашу фамилию: ")
+-print("Вас зовут: " + last_name + " " + first_name)
++output_string = f"Вас зовут: {last_name} {first_name}"
++print(output_string)
+ 
