@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine, text
 
+
 class Subject:
     def __init__(self):
         self.db_connection_string = "postgresql://postgres:456@localhost:5432/QA"
@@ -16,6 +17,7 @@ class Subject:
                 text("INSERT INTO subject (subject_title, subject_id) VALUES (:subject_title, :subject_id)"),
                 {"subject_title": subject_title, "subject_id": subject_id}
             )
+            connection.commit()
 
     def update(self, subject_id, new_title):
         with self.db.connect() as connection:
@@ -23,6 +25,7 @@ class Subject:
                 text("UPDATE subject SET subject_title = :new_title WHERE subject_id = :subject_id"),
                 {"new_title": new_title, "subject_id": subject_id}
             )
+            connection.commit()
 
     def delete(self, subject_id):
         with self.db.connect() as connection:
@@ -30,6 +33,7 @@ class Subject:
                 text("DELETE FROM subject WHERE subject_id = :subject_id"),
                 {"subject_id": subject_id}
             )
+            connection.commit()
 
     def get_by_id(self, subject_id):
         """Возвращает запись по конкретному ID."""
