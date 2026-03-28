@@ -1,0 +1,1 @@
+[{"uid":"7c1eea5cd04b017e","name":"Полный сценарий покупки товаров","time":{"start":1774696388540,"stop":1774696464988,"duration":76448},"status":"broken","severity":"blocker"},{"uid":"67f6e30e7ca24849","name":"Тест калькулятора с задержкой","time":{"start":1774696533428,"stop":1774696586568,"duration":53140},"status":"passed","severity":"critical"}]
